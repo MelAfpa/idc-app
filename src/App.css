@@ -1,34 +1,68 @@
-.App {
-  /* text-align: center; */
-  background-image: url("uploads/fond.avif");
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: brightness(50%);
+@font-face {
+  font-family: "FFF";
+  src: url("./uploads/fonts/FFF_Tusj.ttf");
 }
 
-.App-logo {
-  width: 300px;
-  margin: 20px;
-  }
-
-.home-title {
-  color: white;
-  font-weight: bold;
-  text-align: center;
+.App {
+  /* text-align: center; */
+  /* filter: brightness(50%); */
+  /* min-height: 20vh; */
 }
 
 .App-header {
-  /* background-color: #282c34; */
-  min-height: 100vh;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white; */
-}
+  /* height: 20%; */
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  }
 
-.App-link {
-  color: #61dafb;
-}
+  .App-header a {
+    color: beige;
+    text-decoration: none;
+    background-color: #8ead76;
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
+  }
+
+.App-logo {
+  width: 300px;
+  vertical-align: middle;
+  }
+
+
+  .App-infos {
+    margin-top: 20px;
+    background-image: url("uploads/fond.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .App-infos h1 {
+    padding: 20px;
+    font-size: 3rem;
+    font-family: "FFF";
+    font-weight: 500;
+    
+  }
+
+  .App-infos a {
+    
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+  }
+
+  .address, .tel {
+    color: white;
+    font-size: 1.5rem;
+  }
+  .app-footer {
+
+  }
+
 
