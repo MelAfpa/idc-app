@@ -1,10 +1,10 @@
-import logo from './uploads/banniere.png';
+// import React, { Component } from "react";
 import './App.css';
 import 'leaflet/dist/leaflet.css';
-// import './home/Home';
-import { FaFacebook, FaCommentAlt } from "react-icons/fa";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { Icon } from 'leaflet';
+import Header from './header/Header';
+import Footer from './footer/Footer';
 
 function App() {
   const markers = [
@@ -22,15 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <a href="App.js" className='home'><img src={logo} href="App.js" className="App-logo" alt="logo" /></a>
-        <a href="#" className='team'>Qui sommes nous ?</a>
-        <a href="#" className='pension'>La Pension</a>
-        <a href="#" className='adoption'>Adopter</a>
-        <a href="#" className='sponsor'>Parrainer</a>
-        <a href="#" className='volunteer'>Bénévolat</a>
-        <a href="#" className='donation'>Faire un don</a>
-      </header>
+      <Header></Header>
 
       <section className='App-infos'>
         <h1>Refuge ouvert tous les jours de 14h à 18h sauf le dimanche !</h1>
@@ -56,11 +48,8 @@ function App() {
         
       </section> */}
 
-      <footer className='App-footer'>
-        <a href="#" className='fb'><FaFacebook/></a>
-        <a href="#" className='contact'><FaCommentAlt/></a>
-        <a href="#" className='mentions'>Mentions légales</a>
-      </footer>
+      <Footer></Footer>
+      
     </div>
   );
 }

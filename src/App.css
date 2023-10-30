@@ -10,32 +10,6 @@
   min-height: 100vh;
 }
 
-.App-header {
-  /* height: 20%; */
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  }
-
-  .App-header .team, .pension, .adoption, .sponsor, .volunteer, .donation {
-    color: beige;
-    text-decoration: none;
-    background-color: #8ead76;
-    margin: 10px;
-    padding: 10px 20px 10px 20px;
-  }
-
-  .home {
-    padding: 10px 20px 10px 0px;
-
-  }
-
-.App-logo {
-  width: 300px;
-  vertical-align: middle;
-  }
-
-
   .App-infos {
     margin-top: 20px;
     background-image: url("uploads/fond.png");
@@ -68,19 +42,14 @@
     color: white;
     font-size: 1.5rem;
   }
-    .App-footer {
-      border: red 2px solid;
-  }
-
   .map {
-    width: 50%;
+    width: 30%;
     height: 500px;
-    margin: auto;
+    text-align: center;
+    margin-bottom: 10px;
   }
 
-  .leaflet-container {
-    height: 100%;
-  }
+
 
 
 

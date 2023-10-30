@@ -1,0 +1,18 @@
+.App-footer {
+/* height: 75px; */
+padding: 10px;
+display: flex;
+justify-content: space-evenly;
+font-size: 1.2em;
+align-items: center;
+}
+
+.fb, .contact{
+    width: 50px;
+}
+
+.mentions {
+    color: black;
+    text-decoration: none;
+
+}
