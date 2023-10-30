@@ -1,11 +1,25 @@
 import logo from './uploads/banniere.png';
 import './App.css';
+import 'leaflet/dist/leaflet.css';
 // import './home/Home';
 import { FaFacebook, FaCommentAlt } from "react-icons/fa";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-
+import { Icon } from 'leaflet';
 
 function App() {
+  const markers = [
+    {
+      geocode: [47.1921, -0.2494],
+      Popup: "Refuge canin Un Coeur Sans Toit"
+    }
+  ];
+
+  const customIcon = new Icon({
+    iconUrl: require("./uploads/shelterIcon.png"),
+    iconSize: [38, 38], // Size of the icon
+    // iconAnchor: [45, 45],
+  });
+
   return (
     <div className="App">
       <header className="App-header">
@@ -24,22 +38,23 @@ function App() {
         <p className='address'>Refuge Canin Un Cœur Sans Toit, Chemin du Clos Melon, Lieu dit « Maffron », 49700 Doué la Fontaine 
         </p>
         <p className='tel'>Téléphone : 06 15 29 09 56</p>
-      </section>
 
-      <section className='map'>
-        <MapContainer center={[47.192, -0.249]} zoom={13}>
+        <MapContainer className='map' center={[47.1921, -0.2494]} zoom={13}>
           <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          {/* <Marker position={[47.192, -0.249]}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker> */}
+         {markers.map(marker => (
+          <Marker position={marker.geocode} icon={customIcon}>
+            <Popup>{marker.Popup}</Popup>
+          </Marker>
+         ))}
         </MapContainer>
-        
       </section>
+{/* 
+      <section className='map'>
+        
+        
+      </section> */}
 
       <footer className='App-footer'>
         <a href="#" className='fb'><FaFacebook/></a>

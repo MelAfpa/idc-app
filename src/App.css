@@ -72,8 +72,15 @@
       border: red 2px solid;
   }
 
-  .map{
-    height: 100vh;
-    width: 400px;
+  .map {
+    width: 50%;
+    height: 500px;
+    margin: auto;
   }
+
+  .leaflet-container {
+    height: 100%;
+  }
+
+
 
