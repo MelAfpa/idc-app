@@ -1,6 +1,7 @@
 // import React, { Component } from "react";
 import './App.css';
 import 'leaflet/dist/leaflet.css';
+import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
 import Team from './team/Team';
