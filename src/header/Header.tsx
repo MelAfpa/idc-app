@@ -1,5 +1,4 @@
 import './Header.css';
-import logo from '../uploads/banniere.png';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -10,7 +9,7 @@ function Header() {
   return (
     <div className="App-header">
       <Link to="/" className="home">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src="img/banniere.png" className="App-logo" alt="logo" />
       </Link>
       <Link to="/team" className="team">
         Qui sommes nous ?
