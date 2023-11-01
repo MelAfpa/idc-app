@@ -1,5 +1,5 @@
-import './Teams.css';
-import Header from './header/Header';
+import './Team.css';
+import Header from '../header/Header';
 import Footer from '../footer/Footer';
 
 
