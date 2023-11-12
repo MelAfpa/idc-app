@@ -5,6 +5,7 @@ import './Adoptions.css';
 import { getDogs } from '../services/dataService';
 import { IAnimal } from 'src/types/Animal';
 import { Animal } from 'src/animal/Animal';
+import { Tarif } from 'src/tarif/Tarif';
 
 function Adoption() {
   const [dogs, setDogs] = useState<IAnimal[]>([]);
@@ -49,59 +50,7 @@ function Adoption() {
             </li>
           </ul>
         </section>
-        <section className="adoption-price">
-          {/* <button className="tarif"> */}
-          <h2>Tarif</h2>
-          <p>
-            Tous nos chiens partent à l'adoption identifiés (par puce), primo
-            vaccinés ou vaccinés totalement et stérilisés si leur âge (ou leur
-            santé) le permet.
-          </p>
-          <ul>
-            <li>
-              <u>Chiots :</u> <br />
-              <i>Identifiés + primo-vaccinés :</i> 170€ <br />
-              <i>Identifiés + vaccinés :</i> 200€ <br />
-              /!\ L'adoptant a l'obligation de le stériliser avant les 7 mois
-              (chèque de caution 250€ à joindre au contrat)
-            </li>
-            <li>
-              <u>Chiens adulte de 6 mois à 5 ans :</u> <br />
-              <i>stérilisés + identifiés + primo-vaccinés :</i> 250€ <br />
-              <i>stérilisés + identifiés + vacciné :</i> 280€
-            </li>
-            <li>
-              <u>Chiennes de 6 mois à 5 ans : </u>
-              <br />
-              <i>stérilisées + identifiées + primo-vaccinées :</i> 270€ <br />
-              <i>stérilisées + identifiées + vaccinées :</i> 300€
-            </li>
-            <li>
-              <u>Chiens adultes de 5 ans à 10 ans : </u>
-              <br />
-              <i>stérilisés + identifiés + primo-vaccinés :</i> 170€ <br />
-              <i>stérilisés + identifiés + vaccinés :</i> 200€
-            </li>
-            <li>
-              <u>Chiennes adultes de 5 ans à 10 ans : </u>
-              <br />
-              <i>stérilisées + identifiées + primo-vaccinées :</i> 230€ <br />
-              <i>stérilisées + identifiées + vaccinées :</i> 260€
-            </li>
-            <li>
-              <u>Chiens adultes de plus de 10 ans : </u>
-              <br />
-              <i>stérilisés + identifiés + primo-vaccinés ou vaccinés :</i> 80€
-            </li>
-            <li>
-              <u>Chiennes adultes plus de 10 ans : </u>
-              <br />
-              <i>stérilisées + identifiées + primo-vaccinées ou vaccinées :</i>
-              120€
-            </li>
-          </ul>
-          {/* </button> */}
-        </section>
+        <Tarif />
         <section>
           {dogs.map((dog, index) => (
             <Animal animal={dog} key={index} />
