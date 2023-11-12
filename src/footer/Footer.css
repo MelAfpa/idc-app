@@ -1,10 +1,13 @@
 .App-footer {
 /* height: 75px; */
 padding: 10px;
+margin-top: 10px;
 display: flex;
 justify-content: space-evenly;
 font-size: 1.2em;
 align-items: center;
+/* background-color: #8ead76; */
+background-color: white;
 }
 
 .fb, .contact{
@@ -12,7 +15,8 @@ align-items: center;
 }
 
 .mentions {
-    color: black;
+    color: #8ead76;
+    /* color: white; */
     text-decoration: none;
 
 }

@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Icon } from 'leaflet';
-
+import './Home.css';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import React from 'react';
@@ -21,7 +21,7 @@ export const Home = function () {
 
   return (
     <div className="App">
-      <Header></Header>
+      <Header />
 
       <section className="App-infos">
         <h1>Refuge ouvert tous les jours de 14h à 18h sauf le dimanche !</h1>
@@ -47,7 +47,7 @@ export const Home = function () {
         
       </section> */}
 
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };
