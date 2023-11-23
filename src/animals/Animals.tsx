@@ -1,4 +1,4 @@
-import { Checkbox } from '@chakra-ui/react';
+import { Checkbox, Flex, Heading, Stack } from '@chakra-ui/react';
 import React, { useState, useEffect } from 'react';
 import { Animal } from 'src/animal/Animal';
 import { getDogs } from 'src/services/dataService';
@@ -28,9 +28,9 @@ export function Animals() {
     })();
   }, []);
 
-  const [okChat, setOkChat] = useState(false);
-  const [okChien, setOkChien] = useState(false);
-  const [okBaby, setOkBaby] = useState(false);
+  const [okChat, setOkChat] = useState(true);
+  const [okChien, setOkChien] = useState(true);
+  const [okBaby, setOkBaby] = useState(true);
 
   useEffect(
     function () {
@@ -40,10 +40,15 @@ export function Animals() {
   );
 
   return (
-    <section className="dogsCard">
-      <div className="dogFilter">
+    <Stack className="dogsCard">
+      <Heading textAlign={'center'} mt={10}>
+        A l'adoption
+      </Heading>
+      <Flex flexDirection="row" justifyContent="space-around" mt={25} mb={8}>
         <Checkbox
+          textShadow="5px 5px 10px black"
           colorScheme="purple"
+          color="black"
           isChecked={okChat}
           onChange={(event) => {
             setOkChat(event.target.checked);
@@ -69,12 +74,14 @@ export function Animals() {
         >
           Sociable enfants
         </Checkbox>
-      </div>
-      <div className="allPictures">
-        {filteredDogs.map((dog, index) => (
-          <Animal animal={dog} key={index} />
-        ))}
-      </div>
-    </section>
+      </Flex>
+      <Stack className="allPictures">
+        <Flex justifyContent="space-around" flexWrap="wrap" m={1}>
+          {filteredDogs.map((dog, index) => (
+            <Animal animal={dog} key={index} />
+          ))}
+        </Flex>
+      </Stack>
+    </Stack>
   );
 }

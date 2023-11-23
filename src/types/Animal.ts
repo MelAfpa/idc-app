@@ -2,7 +2,7 @@
 
 export interface IAnimal {
     name: string
-    birth: Date
+    birth: string
     address: string
     identification: number
     price: number
