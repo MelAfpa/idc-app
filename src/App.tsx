@@ -7,7 +7,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import Team from './team/Team';
 import Adoption from './adoptions/Adoptions';
 import { Home } from './home/Home';
-
+import Pension from './pension/Pension';
 function App() {
   return (
     <ChakraProvider>
@@ -16,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/team" element={<Team />} />
           <Route path="/adoption" element={<Adoption />} />
+          <Route path="/pension" element={<Pension />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

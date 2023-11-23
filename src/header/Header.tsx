@@ -1,35 +1,81 @@
-import './Header.css';
+import { Flex, Image, Link } from '@chakra-ui/react';
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link as ReactRouterLink } from 'react-router-dom';
 
 function Header() {
-  console.log('HEADER');
-
   return (
-    <div className="App-header">
-      <Link to="/" className="home">
-        <img src="img/banniere.png" className="App-logo" alt="logo" />
+    <Flex
+      justifyContent={'space-between'}
+      m={'10px'}
+      alignItems={'center'}
+      fontSize={'1.2em'}
+      bgColor={'white'}
+    >
+      <Link as={ReactRouterLink} to="/" p={'10px 20px 10px 0px'}>
+        <Image
+          src="img/banniere.png"
+          alt="logo"
+          w={'350px'}
+          verticalAlign={'middle'}
+        />
       </Link>
-      {/* <Link to="/team" className="team">
-        Qui sommes nous ?
-      </Link> */}
-      <Link to="/" className="pension">
+      <Link
+        as={ReactRouterLink}
+        to="/pension"
+        color={'white'}
+        bgColor={'#8ead76'}
+        m={'10px'}
+        p={'10px 20px 10px 20px'}
+        fontWeight={600}
+      >
         La Pension
       </Link>
-      <Link to="/adoption" className="adoption">
+      <Link
+        as={ReactRouterLink}
+        to="/adoption"
+        color={'white'}
+        bgColor={'#8ead76'}
+        m={'10px'}
+        p={'10px 20px 10px 20px'}
+        fontWeight={600}
+      >
         Adopter
       </Link>
-      <Link to="/" className="sponsor">
+      <Link
+        as={ReactRouterLink}
+        to="/"
+        color={'white'}
+        bgColor={'#8ead76'}
+        m={'10px'}
+        p={'10px 20px 10px 20px'}
+        fontWeight={600}
+      >
         Parrainer
       </Link>
-      <Link to="/" className="volunteer">
+      <Link
+        as={ReactRouterLink}
+        to="/"
+        color={'white'}
+        bgColor={'#8ead76'}
+        m={'10px'}
+        p={'10px 20px 10px 20px'}
+        fontWeight={600}
+      >
         Bénévolat
       </Link>
-      <Link to="/" className="donation">
+      <Link
+        as={ReactRouterLink}
+        to="/"
+        color={'white'}
+        bgColor={'#8ead76'}
+        m={'10px'}
+        p={'10px 20px 10px 20px'}
+        fontWeight={600}
+      >
         Faire un don
       </Link>
-    </div>
+    </Flex>
   );
 }
 
