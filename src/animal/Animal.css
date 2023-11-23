@@ -1,0 +1,49 @@
+/* .animalContainer{
+    width: 300px;
+    height: 250px;  
+    margin: 5px;
+} */
+
+.animalCard  {
+    width: 350px;
+    height: 450px;
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 13px -3px 13px black;
+}
+
+.cardHeader {
+    /* width: 100%; */
+    height: 60%;
+    padding: 0px;
+    margin: auto;
+}
+
+.animalPicture {
+    height: 100%;
+    object-fit: contain;
+}
+
+.cardBody {
+    height: 30%;
+    padding: 0px;
+}
+
+.cardBodyHeader {
+    height: 20%;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.cardBodyBody {
+    height: 10%;
+    overflow: scroll;
+    text-align: justify;
+}
+
+
+
+.cardFooter {
+height: 10%;}
+
