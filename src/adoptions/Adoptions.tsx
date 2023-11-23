@@ -1,41 +1,11 @@
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Adoptions.css';
-import { getDogs } from '../services/dataService';
-import { IAnimal } from 'src/types/Animal';
-import { Animal } from 'src/animal/Animal';
 import { Tarif } from 'src/tarif/Tarif';
-import { Checkbox } from '@chakra-ui/react';
-
-function filterDogs(
-  dogs: IAnimal[],
-  okBaby: boolean,
-  okChat: boolean,
-  okChien: boolean
-) {
-  return dogs.filter(
-    (dog) =>
-      (!okBaby || (okBaby && dog.baby_ok)) &&
-      (!okChat || (okChat && dog.cat_ok)) &&
-      (!okChien || (okChien && dog.dog_ok))
-  );
-}
+import { Animals } from 'src/animals/Animals';
 
 function Adoption() {
-  const [dogs, setDogs] = useState<IAnimal[]>([]);
-
-  useEffect(function () {
-    (async function () {
-      setDogs(await getDogs());
-    })();
-  }, []);
-
-  const [okChat, setOkChat] = useState(false);
-  const [okChien, setOkChien] = useState(false);
-  const [okBaby, setOkBaby] = useState(false);
-  const filteredDogs = filterDogs(dogs, okBaby, okChat, okChien);
-
   return (
     <div>
       <Header />
@@ -71,42 +41,7 @@ function Adoption() {
           </ul>
         </section>
         <Tarif />
-        <section className="dogsCard">
-          <div className="dogFilter">
-            <Checkbox
-              colorScheme="purple"
-              isChecked={okChat}
-              onChange={(event) => {
-                setOkChat(event.target.checked);
-              }}
-            >
-              Sociable chat
-            </Checkbox>
-            <Checkbox
-              colorScheme="green"
-              isChecked={okChien}
-              onChange={(event) => {
-                setOkChien(event.target.checked);
-              }}
-            >
-              Sociable chien
-            </Checkbox>
-            <Checkbox
-              colorScheme="blue"
-              isChecked={okBaby}
-              onChange={(event) => {
-                setOkBaby(event.target.checked);
-              }}
-            >
-              Sociable enfants
-            </Checkbox>
-          </div>
-          <div className="allPictures">
-            {filteredDogs.map((dog, index) => (
-              <Animal animal={dog} key={index} />
-            ))}
-          </div>
-        </section>
+        <Animals />
       </div>
       <Footer />
     </div>
