@@ -6,6 +6,21 @@ import { getDogs } from '../services/dataService';
 import { IAnimal } from 'src/types/Animal';
 import { Animal } from 'src/animal/Animal';
 import { Tarif } from 'src/tarif/Tarif';
+import { Checkbox } from '@chakra-ui/react';
+
+function filterDogs(
+  dogs: IAnimal[],
+  okBaby: boolean,
+  okChat: boolean,
+  okChien: boolean
+) {
+  return dogs.filter(
+    (dog) =>
+      (!okBaby || (okBaby && dog.baby_ok)) &&
+      (!okChat || (okChat && dog.cat_ok)) &&
+      (!okChien || (okChien && dog.dog_ok))
+  );
+}
 
 function Adoption() {
   const [dogs, setDogs] = useState<IAnimal[]>([]);
@@ -15,6 +30,11 @@ function Adoption() {
       setDogs(await getDogs());
     })();
   }, []);
+
+  const [okChat, setOkChat] = useState(false);
+  const [okChien, setOkChien] = useState(false);
+  const [okBaby, setOkBaby] = useState(false);
+  const filteredDogs = filterDogs(dogs, okBaby, okChat, okChien);
 
   return (
     <div>
@@ -51,10 +71,41 @@ function Adoption() {
           </ul>
         </section>
         <Tarif />
-        <section>
-          {dogs.map((dog, index) => (
-            <Animal animal={dog} key={index} />
-          ))}
+        <section className="dogsCard">
+          <div className="dogFilter">
+            <Checkbox
+              colorScheme="purple"
+              isChecked={okChat}
+              onChange={(event) => {
+                setOkChat(event.target.checked);
+              }}
+            >
+              Sociable chat
+            </Checkbox>
+            <Checkbox
+              colorScheme="green"
+              isChecked={okChien}
+              onChange={(event) => {
+                setOkChien(event.target.checked);
+              }}
+            >
+              Sociable chien
+            </Checkbox>
+            <Checkbox
+              colorScheme="blue"
+              isChecked={okBaby}
+              onChange={(event) => {
+                setOkBaby(event.target.checked);
+              }}
+            >
+              Sociable enfants
+            </Checkbox>
+          </div>
+          <div className="allPictures">
+            {filteredDogs.map((dog, index) => (
+              <Animal animal={dog} key={index} />
+            ))}
+          </div>
         </section>
       </div>
       <Footer />
