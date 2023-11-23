@@ -11,9 +11,9 @@ function Header() {
       <Link to="/" className="home">
         <img src="img/banniere.png" className="App-logo" alt="logo" />
       </Link>
-      <Link to="/team" className="team">
+      {/* <Link to="/team" className="team">
         Qui sommes nous ?
-      </Link>
+      </Link> */}
       <Link to="/" className="pension">
         La Pension
       </Link>
