@@ -1,8 +1,7 @@
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import React from 'react';
-// import './Adoptions.css';
-import { Tarif } from 'src/tarif/Tarif';
+import { Tarifs } from 'src/tarifs/Tarifs';
 import { Animals } from 'src/animals/Animals';
 import {
   Heading,
@@ -73,7 +72,8 @@ function Adoption() {
             </List>
           </Text>
         </Stack>
-        <Tarif />
+        <Tarifs />
+
         <Animals />
       </Stack>
       <Footer />
