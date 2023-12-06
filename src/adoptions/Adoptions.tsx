@@ -19,7 +19,7 @@ function Adoption() {
       <Header />
       <Stack bg={'rgba(162, 162, 162, 0.219)'}>
         <Heading
-          bgImage={'url(../../img/adopter.jpg)'}
+          bgImage={'url(../../img/en_tete/adopter.jpg)'}
           p={'40px'}
           textAlign={'center'}
           fontSize={'4em'}
