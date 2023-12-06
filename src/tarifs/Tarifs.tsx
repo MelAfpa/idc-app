@@ -25,10 +25,10 @@ export function Tarifs() {
         Tarif
       </Heading>
       <>
-        <Text>
+        <Text mb={2}>
           Tous nos chiens partent à l'adoption identifiés (par puce), primo
           vaccinés ou vaccinés totalement et stérilisés si leur âge (ou leur
-          santé) le permet.
+          santé) le permet :
         </Text>
         <Stack>
           {tarifs.map((tarif, index) => (
