@@ -12,14 +12,22 @@ import {
 } from '@chakra-ui/react';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import Carousel from 'src/carousel/CarouselComponent';
+import CarouselParrainage from 'src/carouselComponent/CarouselParrainage';
 
 export default function Parrainer() {
   return (
     <>
-      <Heading position={'fixed'}>
-        <Header />
-      </Heading>
+      <Header />
+      <Heading
+        bgImage={'url(../../img/en_tete/parrainer.png)'}
+        bgPosition={'center'}
+        p={'40px'}
+        textAlign={'center'}
+        fontSize={'4em'}
+        color={'white'}
+      >
+        Parrainer
+      </Heading>{' '}
       <Flex
         backgroundColor={'rgba(162, 162, 162, 0.219)'}
         alignItems={'center'}
@@ -31,15 +39,15 @@ export default function Parrainer() {
             soit ayant des pathologies qui les rendent inadoptables. Ces prises
             en charge ont un coût non négligeable pour l'association car , en
             plus de l'identification, de la vaccination et de la stérilisation,
-            s'ajoutent de nombreux frais vétérinaires comme de nombreuses
-            consultations vétérinaires associées à de la nourriture spécifique
-            et à des médicaments.
+            s'ajoutent beaucoup de frais comme de nombreuses consultations
+            vétérinaires associées à de la nourriture spécifique et à des
+            médicaments.
           </Text>
           <Text mb={10}>
             Certains chiens sont encore jeunes et malheureusement, nous ne
             pouvons les proposer à l'adoption car certains ont des problèmes
-            comportementaux qui les rendent inadoptables. Ainsi, ceux là,
-            resteront à charge toute leur vie par l'association et vieilliront
+            comportementaux qui les rendent inadoptables. Ainsi, ceux là
+            resteront à charge toute leur vie de l'association et vieilliront
             dans leur famille d'accueil.
           </Text>
           <Text mb={10}>
@@ -57,7 +65,7 @@ export default function Parrainer() {
           </Text>
         </Stack>
         <Stack w={'1000px'} mt={8}>
-          <Carousel />
+          <CarouselParrainage />
         </Stack>
       </Flex>
       <Footer />
