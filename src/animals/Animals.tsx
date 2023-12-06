@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Animal } from 'src/animal/Animal';
 import { getDogs } from 'src/services/dataService';
 import { IAnimal } from 'src/types/Animal';
+// import { getTarifs } from 'src/services/dataService';
 
 function filterDogs(
   dogs: IAnimal[],

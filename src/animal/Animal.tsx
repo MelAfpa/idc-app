@@ -45,7 +45,7 @@ export function Animal({ animal }: IProps) {
             <Text
               textAlign="justify"
               maxH="95px"
-              overflow="scroll"
+              overflowY="scroll"
               // textOverflow="ellipsis"
             >
               {animal.description}
