@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../footer/Footer';
-import Header from 'src/header/Header';
+import Header from '../header/Header';
 import {
   Flex,
   Heading,
@@ -11,17 +11,19 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-// import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { FaPaw } from 'react-icons/fa';
-import Carousel from 'src/carousel/CarouselComponent';
+import CarouselPension from '../carouselComponent/CarouselComponentPension';
+
+// import { ICarouselPictures } from 'src/types/PensionPictures';
+// import { getCarouselPictures } from 'src/services/dataService';
 
 export default function Pension() {
   return (
     <>
       <Header />
       <Heading
-        bgImage={'url(../../img/pension3.jpg)'}
+        bgImage={'url(../../img/en_tete/pension3.jpg)'}
         p={'40px'}
         textAlign={'center'}
         fontSize={'4em'}
@@ -78,7 +80,7 @@ export default function Pension() {
           </List>
         </Stack>
         <Stack w={'35%'} mt={8}>
-          <Carousel />
+          <CarouselPension />
         </Stack>
       </Flex>
       <Footer />
