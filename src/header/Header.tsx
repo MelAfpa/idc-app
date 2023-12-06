@@ -44,7 +44,7 @@ function Header() {
       </Link>
       <Link
         as={ReactRouterLink}
-        to="/"
+        to="/parrainer"
         color={'white'}
         bgColor={'#8ead76'}
         m={'10px'}
@@ -55,7 +55,7 @@ function Header() {
       </Link>
       <Link
         as={ReactRouterLink}
-        to="/"
+        to="/benevolat"
         color={'white'}
         bgColor={'#8ead76'}
         m={'10px'}
@@ -66,7 +66,7 @@ function Header() {
       </Link>
       <Link
         as={ReactRouterLink}
-        to="/"
+        to="/dons"
         color={'white'}
         bgColor={'#8ead76'}
         m={'10px'}
